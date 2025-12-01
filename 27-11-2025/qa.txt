@@ -1,0 +1,21 @@
+What is the single biggest mistake you see teams make with LangChain in production?
+
+Strong closing answer: Not guarding the output parser. A single hallucinated or truncated response from the LLM will raise an unhandled OutputParserException and crash the entire request. In every production pipeline we wrap the final parser in OutputFixingParser + retry + a fallback to a simpler model or a default value, because 100% of the reliability problems we’ve seen come from treating LLM output as trustworthy.
+
+How do you stream tokens to the frontend and still return a validated Pydantic object at the end?
+
+You say: We use chain.astream_events() and filter on event name "on_chat_model_stream" for token-by-token streaming to the UI, then either wait for the final "on_chain_end" event where the parsed Pydantic object lives, or we separately call chain.invoke() after the stream finishes if we only need the final structured result.
+
+How do you force a ReAct agent to return structured output instead of free-form text?
+
+Answer: Never use with_structured_output on the individual tools. Instead, you pipe the agent executor’s output through a final parser: agent_executor | RunnableLambda(lambda x: x["output"]) | parser. Or you use the newer create_structured_output_agent pattern that injects a final “Answer:” step with format instructions so the agent’s AgentFinish step is already parseable.
+
+What is LCEL and why did LangChain bet everything on it?
+You answer: LCEL, the LangChain Expression Language, is the pipe-based (| operator) declarative way of building chains that replaced the old imperative Chain classes. It gives you native streaming, async, parallel execution, built-in retry and fallback, single-line tracing, and automatic OpenAPI schema generation out of the box.
+
+
+Walk me through the different places you can put validation logic in Pydantic v2.
+Answer: Field validators run per field and keep running even if earlier fields fail — great for cleaning individual fields. Model validators with mode='before' get the raw dictionary, perfect for preprocessing or normalizing data before any field-level validation happens. Model validators with mode='after' run on the partially validated model instance, so you have access to all fields for cross-field checks — for example, ensuring end_date is after start_date or that total_budget equals the sum of line items.
+
+How do you guarantee an LLM never returns malformed JSON in production?
+You say: In 2025 the correct way is to call with_structured_output directly on the model — for example, llm.with_structured_output(MyModel, method="json_mode") on OpenAI, Anthropic, Mistral, Groq or Fireworks — because it uses the provider’s native constrained decoding, so the tokens are physically incapable of producing invalid JSON. When the model doesn’t support native JSON mode, we chain prompt → llm → PydanticOutputParser → OutputFixingParser → RetryWithErrorParser so that any ValidationError is automatically sent back to the same LLM with the original instructions plus the exact Pydantic error message. We usually allow one or two retries and then route to a dead-letter queue or human-in-the-loop.

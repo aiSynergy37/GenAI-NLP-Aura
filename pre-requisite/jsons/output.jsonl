@@ -1,0 +1,14 @@
+{"id": "evt_006", "user_id": "u999", "action": "signup", "timestamp": "2025-11-27T07:55:30Z"}
+{"id": "evt_006", "user_id": "u999", "action": "verify_email", "timestamp": "2025-11-27T08:00:05Z"}
+{"id": "evt_002", "user_id": "u456", "action": "view_page", "page": "/checkout", "timestamp": "2025-11-27T12:20:15Z"}
+{"id": "evt_007", "user_id": "u456", "action": "purchase", "amount": 1299.99, "timestamp": "2025-11-27T12:15:33Z"}
+{"id": "evt_010", "user_id": "u789", "action": "purchase", "amount": 89.50, "timestamp": "2025-11-27T15:00:00Z"}
+{"id": "evt_013", "user_id": "u789", "action": "search", "query": "best LLM 2025", "timestamp": "2025-11-27T17:25:40Z"}
+{"id": "evt_001", "user_id": "u123", "action": "login", "timestamp": "2025-11-27T08:15:22Z"}
+{"id": "evt_003", "user_id": "u123", "action": "add_to_cart", "product": "monitor", "timestamp": "2025-11-27T14:10:22Z"}
+{"id": "evt_004", "user_id": "u789", "action": "search", "query": "wireless mouse", "timestamp": "2025-11-27T10:30:00Z"}
+{"id": "evt_005", "user_id": "u123", "action": "login", "timestamp": "2025-11-27T16:05:47Z"}
+{"id": "evt_008", "user_id": "u123", "action": "logout", "timestamp": "2025-11-27T13:20:05Z"}
+{"id": "evt_009", "user_id": "u555", "action": "click_ad", "ad_id": "ad_2025_promo", "timestamp": "2025-11-27T11:11:11Z"}
+{"id": "evt_011", "user_id": "u444", "action": "view_page", "page": "/blog/genai-2025", "timestamp": "2025-11-27T10:10:10Z"}
+{"id": "evt_012", "user_id": "u123", "action": "feedback", "rating": 5, "comment": "Great experience!", "timestamp": "2025-11-27T16:30:00Z"}
