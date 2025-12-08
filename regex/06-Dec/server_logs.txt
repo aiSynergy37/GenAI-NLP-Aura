@@ -1,0 +1,6 @@
+[2025-12-06 10:22:51] INFO   User: john_doe   Action: LOGIN_OK   IP=192.168.0.12
+[2025-12-06 10:23:11] WARN   User: jane_smith Action: PASSWORD_FAIL   IP = 10.0.0.1
+[2025-12-06 10:25:45] ERROR  User=mark_thompson Action:LOGIN_OK IP=172.16.0.4
+[2025-12-06 10:30:01] INFO User:mike_rogers Action:DOWNLOAD File="sales_report.pdf"   IP=192.168.0.12
+[2025-12-06 10:31:02] INFO User:sarah_jones Action:DOWNLOAD File="invoice_2025.csv" IP=10.0.0.1
+[2025-12-06 10:33:25] ERROR User:john_doe Action:PASSWORD_FAIL IP=172.16.0.4.

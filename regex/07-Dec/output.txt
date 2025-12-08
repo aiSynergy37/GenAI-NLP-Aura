@@ -1,0 +1,8 @@
+John Doe
+Mike Rogers
+Sarah Adams
+john.doe@company.com
+mike.r@outlook.com
+sadams@company.com
+jane.smith@gmail.com
+r@outlook.com
