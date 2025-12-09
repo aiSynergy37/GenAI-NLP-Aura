@@ -4,9 +4,9 @@ major nlpt tasks
 
 1.txt classification
 
-	A.sentiment analysis -- pos review or neg review
-	B.spam detection -- spam or ham
-	C.emotion detection -- happy, anxious, angry, sad
+		A.sentiment analysis -- pos review or neg review
+		B.spam detection -- spam or ham
+		C.emotion detection -- happy, anxious, angry, sad
 
 2.txt summarization
 
