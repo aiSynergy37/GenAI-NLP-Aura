@@ -1,0 +1,5 @@
+CustomerID,Name,Email,Phone,Join Date
+1,John Doe,john.doe@gmail.com,+1 555-123-4567,2023-01-15
+2,alice smith,Alice.Smith@outlook.com,(555) 987 987-6543,2023/02/20
+3,bob,,,2023-03-01
+4,"Eve, ""The Analyst""",eve@company.co.uk,+44 20 7946 0958,2023-04-10

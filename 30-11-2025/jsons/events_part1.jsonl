@@ -1,0 +1,5 @@
+{"id": "evt_001", "user_id": "u123", "action": "login", "timestamp": "2025-11-27T08:15:22Z", "ip": "192.168.1.10"}
+{"id": "evt_002", "user_id": "u456", "action": "view_page", "page": "/home", "timestamp": "2025-11-27T08:20:45Z"}
+{"id": "evt_003", "user_id": "u123", "action": "add_to_cart", "product": "laptop", "timestamp": "2025-11-27T09:05:12Z"}
+{"id": "evt_004", "user_id": "u789", "action": "search", "query": "wireless mouse", "timestamp": "2025-11-27T10:30:00Z"}
+{"id": "evt_005", "user_id": "u123", "action": "login", "timestamp": "2025-11-27T11:42:18Z"}

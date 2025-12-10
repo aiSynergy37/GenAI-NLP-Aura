@@ -1,0 +1,4 @@
+{"id": "evt_006", "user_id": "u999", "action": "signup", "timestamp": "2025-11-27T07:55:30Z"}
+{"id": "evt_002", "user_id": "u456", "action": "view_page", "page": "/pricing", "timestamp": "2025-11-27T09:45:10Z"}
+{"id": "evt_007", "user_id": "u456", "action": "purchase", "amount": 1299.99, "timestamp": "2025-11-27T12:15:33Z"}
+{"id": "evt_008", "user_id": "u123", "action": "logout", "timestamp": "2025-11-27T13:20:05Z"}
