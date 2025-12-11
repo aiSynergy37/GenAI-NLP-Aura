@@ -1,0 +1,11 @@
+Title: Long-Context Language Models and Their Implications for Retrieval-Augmented Generation
+
+Abstract
+Recent advances in transformer architecture have dramatically extended the context window of large language models. Models such as Gemini 1.5 Pro (2 million tokens) and Magic.dev's LTM-2-Mini (10 million tokens) have demonstrated the ability to process entire codebases, books, and long legal documents in a single forward pass. This paper investigates the impact of these long-context capabilities on retrieval-augmented generation (RAG) systems.
+
+Introduction
+Traditionally, RAG pipelines split documents into small chunks (typically 512–2048 tokens) due to transformer context limitations. These chunks are embedded and stored in a vector database, then retrieved using similarity search at inference time. While effective, this approach suffers from several issues: loss of global context, chunk boundary problems, and difficulty maintaining coherence across large documents.
+
+With the emergence of million-token context windows, we can now consider "needle-in-a-haystack" retrieval at extreme scales. Early experiments show that models can accurately retrieve and reason about information buried at position 1.8 million in a 2-million-token context with near-perfect accuracy.
+
+However, longer contexts come with increased computational cost (O(n²) attention) and higher memory requirements. Techniques such as Ring Attention, Infini-Attention, and Transformer-XL style recurrence are being developed to mitigate these scaling issues.
