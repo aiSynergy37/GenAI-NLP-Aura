@@ -1,0 +1,6 @@
+This Agreement is entered into as of 15 January 2026, by and between OpenAI LP, a Delaware limited partnership with offices at San Francisco, California (“Licensor”), and DeepMind Technologies Limited, a company incorporated in England and Wales (“Licensee”).
+The arbitration shall take place in Zurich, Switzerland under the rules of the International Chamber of Commerce.
+Licensee shall pay Licensor an upfront fee of One Hundred Fifty Million United States Dollars (USD $150,000,000) within thirty (30) days of the Effective Date.
+The Intellectual Property Rights in Grok-4 and Grok-5 models shall remain exclusively owned by xAI Corp.
+Any dispute arising out of this Agreement shall be resolved exclusively in the courts of the State of New York.
+Licensee represents that it is duly organized under the laws of the United Kingdom and has full corporate power to enter into this transaction.
